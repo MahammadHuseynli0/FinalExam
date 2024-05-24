@@ -1,0 +1,23 @@
+﻿@using Exam.Core.Models
+
+@model Chef
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+
+			<form asp-action="DeletePost" method="post" class="card" style="width: 18rem;">
+				<img src="~/uploads/chefs/@Model.ImageUrl" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@Model.Name</h5>
+					<p class="card-text">@Model.Description</p>
+					<input hidden asp-for="@Model.Id" value="@Model.Id" />
+					<a asp-action="Index" class="btn btn-primary">Go back</a>
+					<button type="submit" class="btn btn-danger">Delete</button>
+				</div>
+			</form>
+
+
+
+		</div>
+	</div>
+</div>
